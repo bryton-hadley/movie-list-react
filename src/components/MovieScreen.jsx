@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieScreen = ({movieList}) => {
+const MovieScreen = ({movieList, page, setPage, list}) => {
 
     const movieDisplay = movieList.map((movie, index) => {
         return <h2>{movie.original_title}</h2>

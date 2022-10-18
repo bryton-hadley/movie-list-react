@@ -11,9 +11,12 @@ import MovieScreen from './components/MovieScreen';
 
 function App() {
   const [list,setList] = useState([]);
+
   const [movieList, setMovieList] = useState([]);
+
   const [page, setPage] = useState(1);
-  // 
+
+  // setting up secrect url
   const getData = () => {
     axios
       .get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`)
@@ -32,7 +35,7 @@ function App() {
       <Header />
       <main>
         <MovieScreen 
-        moviList={movieList}
+        movieList={movieList}
         page={page}
         setPage={setPage}
         list={list}
