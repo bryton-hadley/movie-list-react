@@ -1,9 +1,12 @@
+// step 1: import 
 import React from "react";
 
-const MovieScreen = ({movieList, page, setPage, list}) => {
+import MovieCard from "./MovieCard";
+
+const MovieScreen = ({addMovie, movieList, page, setPage, list}) => {
 
     const movieDisplay = movieList.map((movie, index) => {
-        return <h2>{movie.original_title}</h2>
+        return <MovieCard addMovie= {addMovie} movie={movie} list={list} />
     });
 
     return (
@@ -13,6 +16,7 @@ const MovieScreen = ({movieList, page, setPage, list}) => {
             <div className="movie-container">
                 {movieDisplay}
             </div>
+            
         </div>
     )
 }
