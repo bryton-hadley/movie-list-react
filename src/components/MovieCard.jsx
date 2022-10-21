@@ -1,8 +1,19 @@
 
 
-const MovieCard = ({movie, addMovie, list}) => {
+const MovieCard = ({movie, addMovie, list, removeMovie}) => {
 
-    
+    const inWatchlist = list.filter((movi) => {
+        return movi.id === movie.id;
+    });
+
+    const button = inWatchlist.length === 0 ? (
+        
+        <button onClick={() => addMovie(movie)}>Add to list</button>
+
+    ) : (
+        <button onClick={() => removeMovie(movie)}>Remove</button>
+
+    );
 
     return (
         <div className="movie-card">
@@ -10,7 +21,7 @@ const MovieCard = ({movie, addMovie, list}) => {
            <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
             <h3>{movie.original_title}</h3> 
             </div>
-            <button onClick={() => addMovie(movie)}>Add to list</button>
+            {button}
         </div>
     );
 }

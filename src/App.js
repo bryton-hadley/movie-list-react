@@ -20,6 +20,16 @@ function App() {
   //  this will use setList to create a copy of list and then add the movie passed in to the list
   const addMovie = (movie) => setList([...list, movie]);
 
+  // creating a function to remove the movie from the watch list 
+  const removeMovie = (movie) => {
+  // Setting newState equal to list.filter and passing in a callback to the filter
+  // this will retun the items in the arrat that are not passed through 
+    const newState  = list.filter((movi) => {
+        return movi !== movie;
+    });
+    setList(newState);
+  };
+
   // setting up secrect url
   const getData = () => {
     axios
@@ -38,17 +48,18 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <MovieScreen 
+        <MovieScreen
+        removeMovie={removeMovie} 
         addMovie={addMovie}
         movieList={movieList}
         page={page}
         setPage={setPage}
         list={list}
         />
-        <Watchlist list={list} />
+        <Watchlist list={list}  removeMovie={removeMovie}/>
       </main>
     </div>
   );
-}
+};
 
 export default App;

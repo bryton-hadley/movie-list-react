@@ -6,16 +6,21 @@ main {
   display: flex;
   justify-content: space-between;
 }
+header {
+  text-align: center;
+}
 
 img {
   width: 200px;
 }
 
 .page {
+  text-align: center;
   border: solid purple 2px;
   width: 66%;
 }
 .watchlist {
+  text-align: center;
   border: solid red 2px;
   width: 33%;
 }
