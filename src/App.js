@@ -46,18 +46,18 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <main>
-        <MovieScreen
-        removeMovie={removeMovie} 
-        addMovie={addMovie}
-        movieList={movieList}
-        page={page}
-        setPage={setPage}
-        list={list}
-        />
-        <Watchlist list={list}  removeMovie={removeMovie}/>
-      </main>
+        <Header />
+          <main>
+            <MovieScreen
+              removeMovie={removeMovie} 
+              addMovie={addMovie}
+              movieList={movieList}
+              page={page}
+              setPage={setPage}
+              list={list}
+              />
+              <Watchlist list={list}  removeMovie={removeMovie}/>
+          </main>
     </div>
   );
 };

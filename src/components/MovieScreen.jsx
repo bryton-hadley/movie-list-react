@@ -18,7 +18,7 @@ const MovieScreen = ({addMovie, movieList, page, setPage, list}) => {
             <h3>Add a movie to your watchlist!</h3>
             <div className="btn-container">
             <button onClick={page !== 1 && decrement}>Previous</button>
-            <button oncClick={increment}>Next</button>
+            <button onClick={increment}>Next</button>
             </div>
             <div className="movie-container">
                 {movieDisplay}

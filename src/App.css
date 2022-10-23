@@ -1,5 +1,8 @@
 *{
   box-sizing: border-box;
+  font-family: "Chillax", sans-serif;
+  color: white;
+  background-image: url(/src/images/lianhao-qu-fJi9CNf3ibs-unsplash.jpg);
 }
 
 main {
@@ -8,21 +11,38 @@ main {
 }
 header {
   text-align: center;
+  color: #BC13FE;
+  text-shadow: #BC13FE 0 0 4px,  #BC13FE 0 0 11px, #BC13FE 0 0 25px;
+  border: red solid 5px;
+  box-shadow: red 0 0 4px, red 0 0 11px, red 0 0 25px;
+  border-radius: 10px;
+  margin: 15px;
 }
 
 img {
   width: 200px;
+  border: solid blue 3px;
+  box-shadow: blue 0 0 4px, blue 0 0 11px, blue 0 0 25px;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .page {
   text-align: center;
-  border: solid purple 2px;
-  width: 66%;
+  text-shadow: red 0 0 4px, red 0 0 11px;
+  border: solid #BC13FE 5px;
+  box-shadow: #BC13FE 0 0 4px, #BC13FE 0 0 11px, #BC13FE 0 0 25px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 60%;
 }
 .watchlist {
   text-align: center;
-  border: solid red 2px;
-  width: 33%;
+  border: solid #BC13FE 5px;
+  box-shadow: #BC13FE 0 0 4px, #BC13FE 0 0 11px, #BC13FE 0 0 25px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 40%;
 }
 
 .movie-container {
@@ -37,5 +57,10 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  text-shadow: #BC13FE 0 0 4px,  #BC13FE 0 0 11px;
+  border: 5px solid red;
+  box-shadow: red 0 0 4px, red 0 0 11px, red 0 0 25px;
+  border-radius: 10px;
   margin: 20px;
 }
+

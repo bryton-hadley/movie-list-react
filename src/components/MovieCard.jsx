@@ -1,5 +1,4 @@
 
-
 const MovieCard = ({movie, addMovie, list, removeMovie}) => {
 
     const inWatchlist = list.filter((movi) => {
@@ -21,7 +20,9 @@ const MovieCard = ({movie, addMovie, list, removeMovie}) => {
            <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
             <h3>{movie.original_title}</h3> 
             </div>
+            <div className="btn-card">
             {button}
+            </div>
         </div>
     );
 }
